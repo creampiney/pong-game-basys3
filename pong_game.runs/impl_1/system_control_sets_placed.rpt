@@ -1,0 +1,127 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2023.1 (win64) Build 3865809 Sun May  7 15:05:29 MDT 2023
+| Date         : Mon Dec 11 00:31:35 2023
+| Host         : LAPTOP-L5K7G5LJ running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file system_control_sets_placed.rpt
+| Design       : system
+| Device       : xc7a35t
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Total control sets                                       |    49 |
+|    Minimum number of control sets                        |    49 |
+|    Addition due to synthesis replication                 |     0 |
+|    Addition due to physical synthesis replication        |     0 |
+| Unused register locations in slices containing registers |   264 |
++----------------------------------------------------------+-------+
+* Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
+** Run report_qor_suggestions for automated merging and remapping suggestions
+
+
+2. Histogram
+------------
+
++--------------------+-------+
+|       Fanout       | Count |
++--------------------+-------+
+| Total control sets |    49 |
+| >= 0 to < 4        |    29 |
+| >= 4 to < 6        |     4 |
+| >= 6 to < 8        |     4 |
+| >= 8 to < 10       |     5 |
+| >= 10 to < 12      |     2 |
+| >= 12 to < 14      |     0 |
+| >= 14 to < 16      |     0 |
+| >= 16              |     5 |
++--------------------+-------+
+* Control sets can be remapped at either synth_design or opt_design
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |              78 |           50 |
+| No           | No                    | Yes                    |               2 |            2 |
+| No           | Yes                   | No                     |              74 |           21 |
+| Yes          | No                    | No                     |              54 |           30 |
+| Yes          | No                    | Yes                    |              31 |           16 |
+| Yes          | Yes                   | No                     |               9 |            3 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++---------------------------------------------------+---------------------------------------------------+--------------------------------------+------------------+----------------+--------------+
+|                    Clock Signal                   |                   Enable Signal                   |           Set/Reset Signal           | Slice Load Count | Bel Load Count | Bels / Slice |
++---------------------------------------------------+---------------------------------------------------+--------------------------------------+------------------+----------------+--------------+
+|  genblk1[10].clkDiv/clkDiv_reg_0                  |                                                   |                                      |                1 |              1 |         1.00 |
+|  genblk1[6].clkDiv/clkDiv_reg_0                   |                                                   |                                      |                1 |              1 |         1.00 |
+|  genblk1[7].clkDiv/clkDiv_reg_0                   |                                                   |                                      |                1 |              1 |         1.00 |
+|  genblk1[4].clkDiv/clkDiv_reg_0                   |                                                   |                                      |                1 |              1 |         1.00 |
+|  genblk1[9].clkDiv/clkDiv_reg_0                   |                                                   |                                      |                1 |              1 |         1.00 |
+|  genblk1[13].clkDiv/clkDiv_reg_0                  |                                                   |                                      |                1 |              1 |         1.00 |
+|  genblk1[5].clkDiv/clkDiv_reg_0                   |                                                   |                                      |                1 |              1 |         1.00 |
+|  genblk1[12].clkDiv/clkDiv_reg_0                  |                                                   |                                      |                1 |              1 |         1.00 |
+|  genblk1[8].clkDiv/clkDiv_reg_0                   |                                                   |                                      |                1 |              1 |         1.00 |
+|  genblk1[15].clkDiv/clkDiv_reg_0                  |                                                   |                                      |                1 |              1 |         1.00 |
+|  genblk1[1].clkDiv/clkDiv_reg_0                   |                                                   |                                      |                1 |              1 |         1.00 |
+|  genblk1[2].clkDiv/clkDiv_reg_0                   |                                                   |                                      |                1 |              1 |         1.00 |
+|  genblk1[17].clkDiv/clkDiv_reg_0                  |                                                   |                                      |                1 |              1 |         1.00 |
+|  genblk1[16].clkDiv/clkDiv_reg_0                  |                                                   |                                      |                1 |              1 |         1.00 |
+|  baud_BUFG                                        | uart/receiver/data_out[2]                         |                                      |                1 |              1 |         1.00 |
+|  baud_BUFG                                        | uart/receiver/data_out[5]                         |                                      |                1 |              1 |         1.00 |
+|  baud_BUFG                                        | uart/receiver/data_out[7]                         |                                      |                1 |              1 |         1.00 |
+|  genblk1[0].clkDiv/clkDiv_reg_0                   |                                                   |                                      |                1 |              1 |         1.00 |
+|  baud_BUFG                                        | uart/receiver/data_out[4]                         |                                      |                1 |              1 |         1.00 |
+|  baud_BUFG                                        | uart/receiver/data_out[3]                         |                                      |                1 |              1 |         1.00 |
+|  baud_BUFG                                        | uart/receiver/data_out[1]                         |                                      |                1 |              1 |         1.00 |
+|  baud_BUFG                                        | uart/receiver/data_out[0]                         |                                      |                1 |              1 |         1.00 |
+|  baud_BUFG                                        | uart/receiver/data_out[6]                         |                                      |                1 |              1 |         1.00 |
+|  baud_BUFG                                        | uart/transmitter/bit_out_i_2_n_0                  | uart/transmitter/bit_out0            |                1 |              1 |         1.00 |
+|  genblk1[14].clkDiv/clkDiv_reg_0                  |                                                   |                                      |                1 |              1 |         1.00 |
+|  genblk1[11].clkDiv/clkDiv_reg_0                  |                                                   |                                      |                1 |              1 |         1.00 |
+|  genblk1[3].clkDiv/clkDiv_reg_0                   |                                                   |                                      |                1 |              1 |         1.00 |
+|  targetClkDiv/CLK                                 |                                                   |                                      |                1 |              2 |         2.00 |
+|  clk_20Hz_BUFG                                    |                                                   | btnC_IBUF                            |                2 |              2 |         1.00 |
+|  clk_IBUF_BUFG                                    | uart/en_reg_0                                     | btnC_IBUF                            |                1 |              4 |         4.00 |
+|  clk_IBUF_BUFG                                    | game_control/player1_paddle_y_pos_next[8]_i_1_n_0 | btnC_IBUF                            |                1 |              4 |         4.00 |
+|  clk_IBUF_BUFG                                    | uart/en_reg_0                                     |                                      |                3 |              5 |         1.67 |
+|  clk_IBUF_BUFG                                    | game_control/player1_paddle_y_pos_next[8]_i_1_n_0 |                                      |                2 |              5 |         2.50 |
+|  clk_IBUF_BUFG                                    |                                                   |                                      |                6 |              7 |         1.17 |
+|  baud_BUFG                                        |                                                   |                                      |                3 |              7 |         2.33 |
+|  clk_20Hz_BUFG                                    | game_control/player1_score[6]_i_1_n_0             | btnC_IBUF                            |                3 |              7 |         2.33 |
+|  clk_20Hz_BUFG                                    | game_control/player2_score[6]_i_1_n_0             | btnC_IBUF                            |                4 |              7 |         1.75 |
+|  baud_BUFG                                        |                                                   | uart/receiver/count[7]_i_1_n_0       |                3 |              8 |         2.67 |
+|  baud_BUFG                                        |                                                   | uart/transmitter/count[7]_i_1__0_n_0 |                2 |              8 |         4.00 |
+|  baud_BUFG                                        | uart/receiver/E[0]                                |                                      |                4 |              8 |         2.00 |
+|  baud_BUFG                                        | uart/transmitter/temp[7]_i_1_n_0                  |                                      |                2 |              8 |         4.00 |
+|  animation_gen/vga_sync_unit/CLK                  |                                                   |                                      |                5 |              9 |         1.80 |
+|  clk_IBUF_BUFG                                    | animation_gen/vga_sync_unit/CLK                   |                                      |                7 |             10 |         1.43 |
+|  clk_IBUF_BUFG                                    | animation_gen/vga_sync_unit/v_count_reg0          |                                      |                4 |             10 |         2.50 |
+|  animation_gen/vga_sync_unit/h_count_reg_reg[9]_0 |                                                   |                                      |               11 |             17 |         1.55 |
+|  clk_20Hz_BUFG                                    | game_control/p_2_in                               | btnC_IBUF                            |                9 |             17 |         1.89 |
+|  clk_20Hz_BUFG                                    |                                                   |                                      |                6 |             18 |         3.00 |
+|  clk_IBUF_BUFG                                    |                                                   | game_control/game_clock/clk_20Hz_0   |                8 |             26 |         3.25 |
+|  clk_IBUF_BUFG                                    |                                                   | uart/baudrate_gen/clear              |                8 |             32 |         4.00 |
++---------------------------------------------------+---------------------------------------------------+--------------------------------------+------------------+----------------+--------------+
+
+
